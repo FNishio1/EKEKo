@@ -239,6 +239,47 @@ color:#ff0088;
   margin-bottom: 20px;
 }
 
+  /* =================================================== */
+  /* CUADRÍCULA 2X2 PARA LA SECCIÓN CÓMO TRABAJAMOS     */
+  /* =================================================== */
+  
+  /* =================================================== */
+  /* CUADRÍCULA 2X2 PARA LA SECCIÓN CÓMO TRABAJAMOS     */
+  /* =================================================== */
+  
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Cuadrícula de 2x2 en celular */
+    gap: 12px;
+    padding: 0;
+  }
+
+  .step {
+    padding: 15px 10px;
+    border-radius: 15px;
+    text-align: center;
+  }
+
+  /* Si usas números o burbujas dentro del paso */
+  .step span {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+
+  .step h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .step p {
+    font-size: 0.85rem; /* Achica el texto para que entre bien */
+    line-height: 1.3;
+    margin: 0;
+  }
+
+
+
 /* =================================================== */
 /* ¡ESTE ES EL NUEVO PEDAZO QUE HACE LA MAGIA!          */
 /* Afecta EXCLUSIVAMENTE a la imagen de la tarjeta 2   */
