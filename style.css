@@ -818,7 +818,7 @@ display:none;
   
   .logo-movil {
     display: block !important;    /* Lo vuelve visible solo en teléfonos */
-    width: 30px !important;      /* Tamaño controlado */
+    width: 10px !important;      /* Tamaño controlado */
     height: auto !important;
     margin: 0 auto 20px auto !important; /* Lo centra horizontalmente */
   }
