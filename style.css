@@ -792,5 +792,13 @@ display:none;
     font-size: 1rem;     
     margin-bottom: 5px;
   }
+
+ /* ========================================= */
+  /* OCULTAR MENÚ DE NAVEGACIÓN EN CELULARES   */
+  /* ========================================= */
+  
+  header, .header, .navbar { 
+    display: none !important; /* Borra el cabezal completo de la pantalla móvil */
+  }
   
 }
