@@ -468,9 +468,6 @@ margin-bottom:20px;
 /* ========================= */
 /* FOOTER */
 /* ========================= */
-/* ========================= */
-/* FOOTER */
-/* ========================= */
 
 .footer {
   padding: 80px 8%;
@@ -512,6 +509,21 @@ margin-bottom:20px;
 .footer-contact p {
   margin: 8px 0; /* Separa un poco el teléfono del correo para que no se vean amontonados */
   font-size: 1rem;
+}
+.footer {
+  padding: 80px 8%;
+  text-align: center;
+  color: white;
+  
+  /* FONTO ROSA + ESTRELLAS EN CSS PURO */
+  background-color: #e456c5;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.8) 2px, transparent 2px),
+    radial-gradient(circle at 75% 20%, rgba(253, 198, 18, 0.6) 3px, transparent 3px),
+    radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.5) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 85% 65%, rgba(255, 255, 255, 0.7) 2px, transparent 2px),
+    radial-gradient(circle at 10% 80%, rgba(253, 198, 18, 0.5) 2.5px, transparent 2.5px);
+  background-size: 100% 100%; /* Distribución única en todo el footer */
 }
 
 
