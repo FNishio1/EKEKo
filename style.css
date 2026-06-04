@@ -163,6 +163,12 @@ color:#ff0088;
   max-width: 520px;
 }
 
+.hero-text img.logo-movil {
+  width: 80px !important;
+  max-width: 80px !important;
+  min-width: auto !important;
+}
+
 
 /* ========================================= */
 /* SECCIÓN DEL DIVISOR PUBLICITARIO          */
