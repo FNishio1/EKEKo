@@ -163,12 +163,6 @@ color:#ff0088;
   max-width: 520px;
 }
 
-.hero-text img.logo-movil {
-  width: 80px !important;
-  max-width: 80px !important;
-  min-width: auto !important;
-}
-
 
 /* ========================================= */
 /* SECCIÓN DEL DIVISOR PUBLICITARIO          */
@@ -202,6 +196,7 @@ color:#ff0088;
 
 
 /* ========================= */
+/* /* ========================= */
 /* SERVICES */
 /* ========================= */
 
@@ -244,44 +239,6 @@ color:#ff0088;
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
-
-  
-    /* =================================================== */
-  /* CUADRÍCULA 2X2 PARA LA SECCIÓN CÓMO TRABAJAMOS     */
-  /* =================================================== */
-  
-  .process-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important; /* Fuerza las 2 columnas en celular */
-    gap: 12px !important;
-    padding: 0 !important;
-  }
-
-  .step {
-    padding: 15px 10px !important;
-    border-radius: 15px !important;
-    text-align: center !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Si usas números o burbujas dentro del paso */
-  .step span {
-    font-size: 1.2rem !important;
-    margin-bottom: 8px !important;
-    display: inline-block !important;
-  }
-
-  .step h3 {
-    font-size: 1rem !important;
-    margin-bottom: 5px !important;
-  }
-
-  .step p {
-    font-size: 0.8rem !important; /* Texto compacto para que no se amontone */
-    line-height: 1.3 !important;
-    margin: 0 !important;
-  }
-
 
 /* =================================================== */
 /* ¡ESTE ES EL NUEVO PEDAZO QUE HACE LA MAGIA!          */
@@ -459,8 +416,8 @@ transform:scale(1.05);
 .process{
 
 padding:120px 8%;
-background:#f8c449;
- background-color:#fef6ef; /* Tu color beige actual */
+background:#fff4ea;
+ background-color: #f5f2eb; /* Tu color beige actual */
   background-image: 
     radial-gradient(circle at 50% 0%, transparent 55%, rgba(255, 255, 255, 0.8) 56%, transparent 62%),
     radial-gradient(circle at 0% 50%, transparent 55%, rgba(255, 255, 255, 0.8) 56%, transparent 62%);
@@ -511,6 +468,9 @@ margin-bottom:20px;
 /* ========================= */
 /* FOOTER */
 /* ========================= */
+/* ========================= */
+/* FOOTER */
+/* ========================= */
 
 .footer {
   padding: 80px 8%;
@@ -534,7 +494,7 @@ margin-bottom:20px;
 .footer-links a {
   color: white;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 500;
   transition: opacity 0.2s ease;
 }
 
@@ -553,25 +513,7 @@ margin-bottom:20px;
   margin: 8px 0; /* Separa un poco el teléfono del correo para que no se vean amontonados */
   font-size: 1rem;
 }
-.footer {
-  padding: 80px 8%;
-  text-align: center;
-  color: white;
-  
-  /* 🟢 1. AGREGA ESTAS 3 LÍNEAS PARA EL EFECTO DE AGUA */
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.12) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0.12) 75%, transparent 75%, transparent);
-  background-size: 80px 80px;
-  animation: olasDelAgua 6s linear infinite; /* Movimiento suave de 6 segundos */
-}
 
-/* ... Tus clases .footer img, .footer-links y .footer-contact se quedan EXACTAMENTE IGUAL ... */
-
-
-/* 🟢 2. PEGA ESTE BLOQUE AL FINAL DE TODO TU ARCHIVO CSS */
-@keyframes olasDelAgua {
-  from { background-position: 0 0; }
-  to { background-position: 80px 0; }
-}
 
 /* ========================= */
 /* CHAT BUTTON */
@@ -696,13 +638,7 @@ margin-bottom:20px;
   opacity: 0.9;
 }
 
-/* Oculta el logo en computadoras */
-.logo-movil {
-  display: none;
-  width: 50px;
-  height: auto;
-  margin: 0 auto 20px auto;
-}
+
 /* ========================= */
 /* RESPONSIVE */
 /* ========================= */
@@ -737,22 +673,20 @@ grid-template-columns:1fr 1fr;
 
 }
 
+}
+
 @media(max-width:768px){
 
     .hero-image img{
         max-width:250px;
     }
 
-    .logo-movil {
-        display: block !important;
-        width: 120px !important;
-        max-width: 120px !important;
-        height: auto !important;
-    }
-
 .nav{
+
 display:none;
+
 }
+
 .hero-text h1{
 
 font-size:3rem;
@@ -779,65 +713,7 @@ padding:90px 6%;
 .chat-button span{
 
 display:none;
-  
+
 }
 
-    /* Pasa las tarjetas a una cuadrícula de 2 columnas lado a lado */
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr); /* ◄ AQUÍ SE ACTIVA LA CUADRÍCULA MÓVIL */
-    gap: 12px;           /* Separación compacta para que entren bien en el celular */
-    padding: 0;          /* Removemos márgenes para aprovechar el ancho del teléfono */
-  }
-
-  /* Reduce al mínimo el tamaño de la tarjeta para que entren dos en la pantalla */
-  .service-card {
-    padding: 15px 10px;  /* Caja súper compacta */
-    border-radius: 15px; 
-  }
-
-  /* Achica la imagen para que no desborde la micro tarjeta */
-  .service-card img {
-    width: 45px;         /* Tamaño mini ideal para cuadrícula de 2x2 */
-    margin-bottom: 10px;
-  }
-
-  /* Letra pequeña para que los títulos entren en un solo renglón si es posible */
-  .service-card h3 {
-    font-size: 1rem;     
-    margin-bottom: 5px;
-  }
-
- /* ========================================= */
-  /* OCULTAR MENÚ DE NAVEGACIÓN EN CELULARES   */
-  /* ========================================= */
-  
-  header, .header, .navbar { 
-    display: none !important; /* Borra el cabezal completo de la pantalla móvil */
-  }
-
-  /* ========================================= */
-  /* COMPACTAR ESPACIO SUPERIOR DEL HERO      */
-  /* ========================================= */
-  
-  .hero {
-    padding-top: 40px !important; /* Reduce el espacio vacío superior al mínimo */
-    min-height: calc(100vh - 40px) !important; /* Reajusta la altura completa de la pantalla */
-  }
-/* ========================================= */
-  /* CONFIGURACIÓN DEL LOGO EN CELULARES       */
-  /* ========================================= */
-  /* Esto especifica la ruta exacta de las cajas para ganar peso en el código */
-  .hero .hero-content img.logo-movil {
-    display: block !important;
-    width: 110px !important;       /* Tamaño fino */
-    max-width: 110px !important;   /* Freno de mano absoluto */
-    height: auto !important;
-    min-width: auto !important;    /* Destruye el width: 100% heredado */
-    margin: 0 auto 20px auto !important; /* Centrado exacto */
-  }
-
-  /* Ajuste de espacio para que no choque con el borde superior */
-  .hero {
-    padding-top: 40px !important; 
-  }
 }
