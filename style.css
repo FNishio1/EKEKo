@@ -727,7 +727,23 @@ padding:90px 6%;
 .chat-button span{
 
 display:none;
-
+  
 }
 
+  /* 🟢 PEGA ÚNICAMENTE ESTE PEDAZO AQUÍ ADENTRO: */
+  .services-grid {
+    grid-template-columns: 1fr; /* Pasa las tarjetas a una sola columna */
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 30px 20px; /* Hace la tarjeta más compacta */
+  }
+
+  .service-card img {
+    width: 80px; /* Achica la imagen para que quepa bien */
+  }
+
+} /* ◄ Esta es la llave final que cierra todo tu responsive, déjala ahí */
+  
 }
