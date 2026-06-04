@@ -800,5 +800,14 @@ display:none;
   header, .header, .navbar { 
     display: none !important; /* Borra el cabezal completo de la pantalla móvil */
   }
+
+  /* ========================================= */
+  /* COMPACTAR ESPACIO SUPERIOR DEL HERO      */
+  /* ========================================= */
+  
+  .hero {
+    padding-top: 40px !important; /* Reduce el espacio vacío superior al mínimo */
+    min-height: calc(100vh - 40px) !important; /* Reajusta la altura completa de la pantalla */
+  }
   
 }
