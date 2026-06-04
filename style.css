@@ -730,20 +730,30 @@ display:none;
   
 }
 
-  /* 🟢 PEGA ÚNICAMENTE ESTE PEDAZO AQUÍ ADENTRO: */
+  /* Hace que la grilla ocupe menos ancho en la pantalla del celular */
   .services-grid {
-    grid-template-columns: 1fr; /* Pasa las tarjetas a una sola columna */
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 15px;          /* Menos separación entre tarjetas */
+    padding: 0 10%;     /* Agrega margen a los lados para que las tarjetas se vean más flacas */
   }
 
+  /* Reduce al mínimo el tamaño de la tarjeta */
   .service-card {
-    padding: 30px 20px; /* Hace la tarjeta más compacta */
+    padding: 20px 15px; /* Caja mucho más pequeña y compacta */
+    border-radius: 20px; /* Redondeado más sutil para pantallas chicas */
   }
 
+  /* Achica la imagen al mínimo */
   .service-card img {
-    width: 80px; /* Achica la imagen para que quepa bien */
+    width: 60px;        /* Imagen más pequeña (antes era 80px/90px) */
+    margin-bottom: 12px;
   }
 
-} /* ◄ Esta es la llave final que cierra todo tu responsive, déjala ahí */
+  /* Achica el título de la tarjeta para que no ocupe tanto espacio */
+  .service-card h3 {
+    font-size: 1.2rem;  /* Letra más pequeña */
+    margin-bottom: 10px;
+  }
+
   
 }
