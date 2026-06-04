@@ -415,8 +415,8 @@ transform:scale(1.05);
 .process{
 
 padding:120px 8%;
-background:#fef6ef;
- background-color:#f8c449; /* Tu color beige actual */
+background:#f8c449;
+ background-color:#fef6ef; /* Tu color beige actual */
   background-image: 
     radial-gradient(circle at 50% 0%, transparent 55%, rgba(255, 255, 255, 0.8) 56%, transparent 62%),
     radial-gradient(circle at 0% 50%, transparent 55%, rgba(255, 255, 255, 0.8) 56%, transparent 62%);
