@@ -730,30 +730,29 @@ display:none;
   
 }
 
-  /* Hace que la grilla ocupe menos ancho en la pantalla del celular */
+    /* Pasa las tarjetas a una cuadrícula de 2 columnas lado a lado */
   .services-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;          /* Menos separación entre tarjetas */
-    padding: 0 10%;     /* Agrega margen a los lados para que las tarjetas se vean más flacas */
+    grid-template-columns: repeat(2, 1fr); /* ◄ AQUÍ SE ACTIVA LA CUADRÍCULA MÓVIL */
+    gap: 12px;           /* Separación compacta para que entren bien en el celular */
+    padding: 0;          /* Removemos márgenes para aprovechar el ancho del teléfono */
   }
 
-  /* Reduce al mínimo el tamaño de la tarjeta */
+  /* Reduce al mínimo el tamaño de la tarjeta para que entren dos en la pantalla */
   .service-card {
-    padding: 20px 15px; /* Caja mucho más pequeña y compacta */
-    border-radius: 20px; /* Redondeado más sutil para pantallas chicas */
+    padding: 15px 10px;  /* Caja súper compacta */
+    border-radius: 15px; 
   }
 
-  /* Achica la imagen al mínimo */
+  /* Achica la imagen para que no desborde la micro tarjeta */
   .service-card img {
-    width: 60px;        /* Imagen más pequeña (antes era 80px/90px) */
-    margin-bottom: 12px;
-  }
-
-  /* Achica el título de la tarjeta para que no ocupe tanto espacio */
-  .service-card h3 {
-    font-size: 1.2rem;  /* Letra más pequeña */
+    width: 45px;         /* Tamaño mini ideal para cuadrícula de 2x2 */
     margin-bottom: 10px;
   }
 
+  /* Letra pequeña para que los títulos entren en un solo renglón si es posible */
+  .service-card h3 {
+    font-size: 1rem;     
+    margin-bottom: 5px;
+  }
   
 }
