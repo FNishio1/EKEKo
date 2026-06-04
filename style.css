@@ -690,7 +690,10 @@ margin-bottom:20px;
   opacity: 0.9;
 }
 
-
+/* Oculta el logo en computadoras */
+.logo-movil {
+  display: none;
+}
 /* ========================= */
 /* RESPONSIVE */
 /* ========================= */
@@ -809,5 +812,19 @@ display:none;
     padding-top: 40px !important; /* Reduce el espacio vacío superior al mínimo */
     min-height: calc(100vh - 40px) !important; /* Reajusta la altura completa de la pantalla */
   }
+    /* ========================================= */
+  /* CONFIGURACIÓN DEL LOGO EN CELULARES       */
+  /* ========================================= */
   
+  .logo-movil {
+    display: block !important;    /* Lo vuelve visible solo en teléfonos */
+    width: 160px !important;      /* Tamaño controlado */
+    height: auto !important;
+    margin: 0 auto 20px auto !important; /* Lo centra horizontalmente */
+  }
+
+  /* Ajuste de espacio para que no choque con el borde superior */
+  .hero {
+    padding-top: 40px !important; 
+  }
 }
