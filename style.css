@@ -239,45 +239,42 @@ color:#ff0088;
   margin-bottom: 20px;
 }
 
-  /* =================================================== */
-  /* CUADRÍCULA 2X2 PARA LA SECCIÓN CÓMO TRABAJAMOS     */
-  /* =================================================== */
   
-  /* =================================================== */
+    /* =================================================== */
   /* CUADRÍCULA 2X2 PARA LA SECCIÓN CÓMO TRABAJAMOS     */
   /* =================================================== */
   
   .process-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Cuadrícula de 2x2 en celular */
-    gap: 12px;
-    padding: 0;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* Fuerza las 2 columnas en celular */
+    gap: 12px !important;
+    padding: 0 !important;
   }
 
   .step {
-    padding: 15px 10px;
-    border-radius: 15px;
-    text-align: center;
+    padding: 15px 10px !important;
+    border-radius: 15px !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
   }
 
   /* Si usas números o burbujas dentro del paso */
   .step span {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-    display: inline-block;
+    font-size: 1.2rem !important;
+    margin-bottom: 8px !important;
+    display: inline-block !important;
   }
 
   .step h3 {
-    font-size: 1rem;
-    margin-bottom: 5px;
+    font-size: 1rem !important;
+    margin-bottom: 5px !important;
   }
 
   .step p {
-    font-size: 0.85rem; /* Achica el texto para que entre bien */
-    line-height: 1.3;
-    margin: 0;
+    font-size: 0.8rem !important; /* Texto compacto para que no se amontone */
+    line-height: 1.3 !important;
+    margin: 0 !important;
   }
-
 
 
 /* =================================================== */
