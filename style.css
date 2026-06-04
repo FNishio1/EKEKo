@@ -693,6 +693,9 @@ margin-bottom:20px;
 /* Oculta el logo en computadoras */
 .logo-movil {
   display: none;
+  width: 120px;
+  height: auto;
+  margin: 0 auto 20px auto;
 }
 /* ========================= */
 /* RESPONSIVE */
@@ -728,20 +731,22 @@ grid-template-columns:1fr 1fr;
 
 }
 
-}
-
 @media(max-width:768px){
 
     .hero-image img{
         max-width:250px;
     }
 
+    .logo-movil {
+        display: block !important;
+        width: 120px !important;
+        max-width: 120px !important;
+        height: auto !important;
+    }
+
 .nav{
-
 display:none;
-
 }
-
 .hero-text h1{
 
 font-size:3rem;
