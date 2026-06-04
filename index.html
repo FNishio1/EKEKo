@@ -59,8 +59,8 @@
 
 </header>
 
-<!-- ========================= -->
-<!-- HERO CORREGIDO CON LOGO MÓVIL -->
+<<!-- ========================= -->
+<!-- HERO CORREGIDO -->
 <!-- ========================= -->
 
 <section class="hero">
@@ -71,9 +71,6 @@
 
     <!-- 1. BLOQUE IZQUIERDO: TEXTOS Y BOTONES -->
     <div class="hero-text">
-       
-    <img src="assets/logo3.webp" alt="EkekoWebs Logo" class="logo-movil">
-       
       <h1>CREAMOS TU WEB PROFESIONAL</h1>
       <p>Diseño web artístico, branding digital y automatización inteligente para negocios modernos.</p>
       
@@ -88,9 +85,9 @@
            Hablar con Ekeko IA
         </a>
       </div>
-    </div> 
+    </div> <!-- ◄ AQUÍ SE CIERRA CORRECTAMENTE EL BLOQUE DE TEXTO -->
 
-    <!-- 2. BLOQUE DERECHO: IMAGEN DEL PERSONAJE -->
+    <!-- 2. BLOQUE DERECHO: IMAGEN DEL PERSONAJE (LADO A LADO) -->
     <div class="hero-image">
       <img src="assets/ekeko.webp" alt="Ekeko">
     </div>
@@ -345,6 +342,22 @@ Publicamos y optimizamos tu proyecto.
   </div>
 </div>
 
+<script src="script.js"></script>
+
+<!-- CAJA DEL CHAT DE EKEKO IA -->
+<div class="chat-box">
+  <div class="top">
+    Ekeko IA
+  </div>
+  <div id="messages"></div>
+  <div class="bottom">
+    <input id="input" type="text" placeholder="Escribe un mensaje...">
+    <button onclick="sendMessage()">
+      Enviar
+    </button>
+  </div>
+</div>
+ <!-- 2. La conexión a tu archivo independiente de JavaScript -->
 <script src="script.js"></script>
 
 </body>
