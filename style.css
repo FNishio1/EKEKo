@@ -812,17 +812,16 @@ display:none;
     padding-top: 40px !important; /* Reduce el espacio vacío superior al mínimo */
     min-height: calc(100vh - 40px) !important; /* Reajusta la altura completa de la pantalla */
   }
-   /* ========================================= */
-  /* CONTROL ABSOLUTO Y FORZADO DEL LOGO MÓVIL */
+/* ========================================= */
+  /* CONFIGURACIÓN DEL LOGO EN CELULARES       */
   /* ========================================= */
   
-  img.logo-movil {
-    display: block !important;
-    width: 100px !important;       /* Tamaño fino y elegante */
-    max-width: 100px !important;   /* Doble freno de mano para que no crezca */
+  img.logo-movil { /* ◄ Añadimos "img" antes del punto para forzar al navegador */
+    display: block !important;    
+    width: 100px !important;       /* Ponle 100px (10px sería un punto invisible) */
+    max-width: 100px !important;   /* Freno de seguridad absoluto */
     height: auto !important;
-    min-width: auto !important;    /* Rompe cualquier regla de width: 100% */
-    margin: 0 auto 15px auto !important; /* Centrado exacto */
+    margin: 0 auto 20px auto !important; 
   }
 
   /* Ajuste de espacio para que no choque con el borde superior */
