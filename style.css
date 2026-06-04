@@ -815,13 +815,14 @@ display:none;
 /* ========================================= */
   /* CONFIGURACIÓN DEL LOGO EN CELULARES       */
   /* ========================================= */
-  
-  img.logo-movil { /* ◄ Añadimos "img" antes del punto para forzar al navegador */
-    display: block !important;    
-    width: 100px !important;       /* Ponle 100px (10px sería un punto invisible) */
-    max-width: 100px !important;   /* Freno de seguridad absoluto */
+  /* Esto especifica la ruta exacta de las cajas para ganar peso en el código */
+  .hero .hero-content img.logo-movil {
+    display: block !important;
+    width: 110px !important;       /* Tamaño fino */
+    max-width: 110px !important;   /* Freno de mano absoluto */
     height: auto !important;
-    margin: 0 auto 20px auto !important; 
+    min-width: auto !important;    /* Destruye el width: 100% heredado */
+    margin: 0 auto 20px auto !important; /* Centrado exacto */
   }
 
   /* Ajuste de espacio para que no choque con el borde superior */
