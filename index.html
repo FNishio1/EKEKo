@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EkekoWebs | Diseño Web Profesional en Perú</title>
+
+<meta name="description" content="EkekoWebs crea webs profesionales para pequeños negocios en Perú. Diseño web, SEO, branding y automatización con IA. ¡Sin pagos mensuales!">
+<meta name="keywords" content="diseño web Peru, paginas web para negocios, SEO Peru, branding digital, automatizacion IA, EkekoWebs">
+<meta name="author" content="EkekoWebs">
+
+<link rel="canonical" href="https://ekeko-webs.netlify.app/">
+
+<meta property="og:title" content="EkekoWebs | Diseño Web Profesional en Perú">
+<meta property="og:description" content="Creamos webs profesionales para pequeños negocios en Perú. Sin pagos mensuales.">
+<meta property="og:url" content="https://ekeko-webs.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://ekeko-webs.netlify.app/assets/logo3.webp">
+<meta property="og:locale" content="es_PE">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EkekoWebs | Diseño Web Profesional en Perú">
+<meta name="twitter:description" content="Creamos webs profesionales para pequeños negocios en Perú.">
+<meta name="twitter:image" content="https://ekeko-webs.netlify.app/assets/logo3.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "EkekoWebs",
+  "description": "Diseño web profesional, SEO, branding y automatización con IA para pequeños negocios en Perú.",
+  "url": "https://ekeko-webs.netlify.app",
+  "telephone": "+51999156493",
+  "email": "EkekoWebs@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "PE"
+  },
+  "serviceArea": "Perú",
+  "priceRange": "$$",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios EkekoWebs",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Diseño Web Profesional"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SEO en Perú"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Branding Digital"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Automatización con IA"}}
+    ]
+  },
+  "sameAs": [
+    "https://instagram.com/ekeko-webs",
+    "https://wa.me/51999156493"
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;700&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- BOTÓN FLOTANTE WHATSAPP CHAT -->
+<div class="wa-chat-button" onclick="abrirWaChat()">
+  <img src="assets/WASAP.jpeg" alt="WhatsApp">
+  <span>WhatsApp</span>
+</div>
+
+<!-- POPUP WHATSAPP CHAT -->
+<div class="wa-chat-box" id="waChatBox">
+  <div class="wa-top">
+    <div class="wa-top-info">
+      <div class="wa-avatar">💬</div>
+      <div>
+        <strong>EkekoWebs</strong>
+        <p>Responde rápido 🟢</p>
+      </div>
+    </div>
+    <button class="wa-close" onclick="cerrarWaChat()">✕</button>
+  </div>
+  <div class="wa-body" id="waMessages">
+    <div class="wa-bubble">
+      ¡Hola! 👋 ¿En qué te puedo ayudar? Escríbenos y te respondemos por WhatsApp.
+    </div>
+  </div>
+  <div class="wa-bottom">
+    <input type="text" id="waInput" placeholder="Escribe tu mensaje...">
+    <button onclick="enviarWaChat()">➤</button>
+  </div>
+</div>
+
+<!-- ========================= -->
+<!-- HEADER -->
+<!-- ========================= -->
+<header class="header">
+  <div class="logo-area">
+    <img src="assets/logo.webp" alt="EkekoWebs">
+  </div>
+  <nav class="nav">
+    <a href="#inicio">Inicio</a>
+    <a href="#por-que">¿Por qué?</a>
+    <a href="#proceso">Cómo trabajamos</a>
+    <a href="#portafolio">Portafolio</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <button class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<!-- MENÚ MÓVIL -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#inicio" onclick="toggleMenu()">Inicio</a>
+  <a href="#por-que" onclick="toggleMenu()">¿Por qué?</a>
+  <a href="#proceso" onclick="toggleMenu()">Cómo trabajamos</a>
+  <a href="#portafolio" onclick="toggleMenu()">Portafolio</a>
+  <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+</div>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+<section class="hero" id="inicio">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <img src="assets/logo3.webp" alt="EkekoWebs Logo" class="logo-movil">
+      <h1>CREAMOS TU WEB PROFESIONAL</h1>
+      <p>¿Tu negocio no aparece en Google? ¿Tus clientes no te encuentran fácil? Te creamos tu web profesional para que te encuentren, te llamen y te compren — directo a tu WhatsApp.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/51999156493" class="btn-primary" target="_blank" rel="noopener noreferrer">
+          Solicitar Cotización
+        </a>
+        <a href="javascript:void(0);" class="btn-secondary" onclick="abrirEkekoChat()">
+          Hablar con Ekeko IA
+        </a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="assets/ekeko.webp" alt="Ekeko">
+    </div>
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- DIVIDER -->
+<!-- ========================= -->
+<section class="divider">
+  <p>⚡ Hacemos publicidad digital para que vendas más, sin depender de nadie. Tu web es tuya desde el día 1 — sin pagos mensuales, sin letra chica, sin sorpresas.</p>
+</section>
+
+<!-- ========================= -->
+<!-- SECCIÓN EDUCATIVA -->
+<!-- ========================= -->
+<section class="educativa" id="por-que">
+  <div class="educativa-content">
+    <h2>¿Por qué una web y no solo redes sociales?</h2>
+    <p>Tu página de Facebook está bien, pero cuando tu cliente busca en Google <strong>"pollería en Miraflores"</strong> o <strong>"cerrajero en San Juan"</strong> — ¿apareces tú? Probablemente no.</p>
+    <p>Las redes sociales son para que te vean. Una web es para que te encuentren cuando ya están listos para comprar. Esa es la diferencia.</p>
+    <p>Con tu web nosotros te metemos en Google, conectamos tu WhatsApp para que te escriban directo y le damos a tu negocio la imagen que se merece.</p>
+  </div>
+  <div class="educativa-cards">
+    <div class="edu-card">
+      <span>📱</span>
+      <h3>Redes Sociales</h3>
+      <p>Te ven cuando publicas. Si no publicas, desapareces.</p>
+    </div>
+    <div class="edu-card edu-card--vs">
+      <span>VS</span>
+    </div>
+    <div class="edu-card edu-card--winner">
+      <span class="edu-badge">✓ Recomendado</span>
+      <span>🌐</span>
+      <h3>Tu Web</h3>
+      <p>Te encuentran cuando buscan lo que vendes, las 24 horas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- CÓMO TRABAJAMOS -->
+<!-- ========================= -->
+<section class="process" id="proceso">
+  <h2>Cómo Trabajamos</h2>
+  <div class="process-grid process-grid--3">
+    <div class="step" data-num="1">
+      <div class="step-icon">
+      <img src="assets/DISENAMOS.webp" alt="Planificamos">
+    </div>
+      <div class="step-text">
+        <h3>Planificamos</h3>
+        <p>Conversamos contigo, entendemos tu negocio y armamos la propuesta visual ideal para atraer clientes.</p>
+      </div>
+    </div>
+    <div class="step" data-num="2">
+      <div class="step-icon">
+       <img src="assets/CONSTRUIMOS.webp" alt="Planificamos">
+    </div>
+      <div class="step-text">
+        <h3>Construimos</h3>
+        <p>Tu web profesional lista desde el día 1. Tuya, sin pagos mensuales ni dependencias.</p>
+      </div>
+    </div>
+    <div class="step" data-num="3">
+      <div class="step-icon">
+      <img src="assets/LANZAMOS.webp" alt="Planificamos">
+    </div>
+      <div class="step-text">
+        <h3>Lanzamos</h3>
+        <p>Publicamos y optimizamos, con dominio gratuito o con el nombre que tú elijas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- CTA -->
+<!-- ========================= -->
+<section class="cta">
+  <div class="cta-box">
+    <h2>Tu negocio necesita estar en internet</h2>
+  </div>
+  <div class="cta-content-wrapper">
+    <div class="animacion-ventas">
+      <span class="frase-1">¿Qué vamos a hacer?</span>
+      <span class="frase-2">¡¡¡Vender!!!</span>
+      <span class="frase-3">vender,</span>
+      <span class="frase-4">vender,</span>
+      <span class="frase-5">vender...</span>
+    </div>
+    <a href="https://wa.me/51999156493" class="cta-button" target="_blank" rel="noopener noreferrer">
+      ¡Quiero mi Web sin Límites!
+    </a>
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- PORTAFOLIO -->
+<!-- ========================= -->
+<section class="portfolio" id="portafolio">
+  <h2>Portafolio</h2>
+  <div class="portfolio-grid">
+
+    <div class="portfolio-item">
+      <div class="phone-mockup">
+        <div class="phone-screen">
+          <img src="assets/Image1.webp" alt="Proyecto 1">
+        </div>
+      </div>
+      <p>Restaurantes locales</p>
+    </div>
+
+    <div class="portfolio-item">
+      <div class="phone-mockup">
+        <div class="phone-screen">
+          <img src="assets/Image2.webp" alt="Proyecto 2">
+        </div>
+      </div>
+      <p>Agencias de turismo</p>
+    </div>
+
+    <div class="portfolio-item">
+      <div class="phone-mockup">
+        <div class="phone-screen">
+          <img src="assets/Image3.webp" alt="Proyecto 3">
+        </div>
+      </div>
+      <p>Comida rapida del barrio</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- PAQUETES (POPUP) -->
+<!-- ========================= -->
+<section class="paquetes-cta">
+  <h2>¿Cuánto cuesta?</h2>
+  <p>Sin sorpresas, sin pagos mensuales. Elige el paquete que va con tu negocio.</p>
+  <p class="paquetes-desde">🔥 Desde S/ 300 — pago único, sin mensualidades</p>
+  <button class="btn-paquetes" onclick="abrirPaquetes()">Ver paquetes y precios</button>
+</section>
+
+<!-- MODAL PAQUETES -->
+<div class="modal-overlay" id="modalPaquetes" onclick="cerrarPaquetes(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="cerrarPaquetes()">✕</button>
+    <h2>Nuestros Paquetes</h2>
+
+    <div class="modal-paquetes-grid">
+
+      <div class="modal-paquete">
+        <div class="modal-paquete-header">
+          <h3>El más fuerte</h3>
+          <p class="modal-precio">S/ 300</p>
+          <p class="modal-subtitulo">Para el negocio que ya tiene redes y quiere dar el siguiente paso.</p>
+        </div>
+        <ul>
+          <li>✦ Landing page con hosting gratuito hasta 1GB</li>
+          <li>✦ Actualización de tu Google Business Profile</li>
+          <li>✦ Conexión de tu red social a tu web</li>
+        </ul>
+        <a href="https://wa.me/51999156493" class="btn-primary" target="_blank" rel="noopener noreferrer">Lo quiero</a>
+      </div>
+
+      <div class="modal-paquete modal-paquete--featured">
+        <div class="modal-paquete-header">
+          <span class="modal-badge">Recomendado</span>
+          <h3>El premium</h3>
+          <p class="modal-precio">S/ 450</p>
+          <p class="modal-subtitulo">Para el negocio que arranca desde cero su presencia digital completa.</p>
+        </div>
+        <ul>
+          <li>✦ Landing page con hosting gratuito hasta 1GB</li>
+          <li>✦ Creación de tu Google Business Profile</li>
+          <li>✦ Creación de una red social a tu elección</li>
+        </ul>
+        <a href="https://wa.me/51999156493" class="btn-primary" target="_blank" rel="noopener noreferrer">Lo quiero</a>
+      </div>
+
+    </div>
+
+    <div class="modal-extras">
+      <h4>Extras</h4>
+      <div class="extras-grid">
+        <div class="extra-item">
+          <span>Dominio personalizado</span>
+          <span>Costo dominio + S/ 30</span>
+        </div>
+        <div class="extra-item">
+          <span>Sesión de fotos para redes o Google Business</span>
+          <span>S/ 100</span>
+        </div>
+        <div class="extra-item">
+          <span>Imagen publicitaria para redes</span>
+          <span>S/ 50</span>
+        </div>
+      </div>
+
+      <h4>Mantenimiento</h4>
+      <div class="extras-grid">
+        <div class="extra-item">
+          <span>10 cambios (fuente, imágenes, colores, etc.)</span>
+          <span>S/ 50</span>
+        </div>
+        <div class="extra-item">
+          <span>Resolución de crash o desconfiguración</span>
+          <span>S/ 50</span>
+        </div>
+        <div class="extra-item">
+          <span>Cambio de hosting o dominio</span>
+          <span>S/ 50</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+<footer class="footer" id="contacto">
+  <img src="assets/logo3.webp" alt="EkekoWebs">
+
+  <div class="footer-cta-buttons">
+    <a href="https://wa.me/51999156493" class="footer-btn footer-btn--whatsapp" target="_blank" rel="noopener noreferrer">
+      💬 Escríbenos por WhatsApp
+    </a>
+    <a href="mailto:EkekoWebs@gmail.com" class="footer-btn footer-btn--email">
+      ✉️ Envíanos un correo
+    </a>
+  </div>
+
+  <div class="footer-links">
+    <a href="#" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+    <a href="https://wa.me/51999156493" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+    <a href="mailto:EkekoWebs@gmail.com">✉️ Correo</a>
+  </div>
+
+  <div class="footer-contact">
+    <p>Teléfono: +51 999 156 493</p>
+    <p>EkekoWebs@gmail.com</p>
+  </div>
+
+  <div class="footer-copyright">
+    EkekoWebs © 2026 — Diseño web profesional en Perú
+  </div>
+</footer>
+
+<!-- EKEKO IA CHAT -->
+<div class="chat-box">
+  <div class="top">Ekeko IA</div>
+  <div id="messages"></div>
+  <div class="bottom">
+    <input id="input" type="text" placeholder="Escribe un mensaje...">
+    <button onclick="sendMessage()">Enviar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
