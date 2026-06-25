@@ -1,6 +1,7 @@
 const messagesDiv = document.getElementById("messages");
 const input = document.getElementById("input");
 let conversation = [];
+const systemGreeting = "¡Hola! 👋 Soy Ekeko IA, el asistente de EkekoWebs. Estamos especializados en crear webs profesionales para pequeños negocios en Perú. ¿En qué te puedo ayudar?";
 
 if (input) {
   input.addEventListener("keydown", function(event) {
@@ -11,7 +12,7 @@ if (input) {
 }
 
 async function sendMessage() {
-  const text = input.value;
+  const text = input.value.trim();
   if (!text) return;
 
   conversation.push({ role: "user", content: text });
