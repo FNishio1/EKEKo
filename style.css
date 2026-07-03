@@ -107,6 +107,7 @@ color:#ff0088;
   font-family: 'Anton', sans-serif;
   font-size: 5rem;
   line-height: 0.95;
+  min-height: 9.5rem;
   color: #00e9b2;
   text-shadow:
     4px 4px 0 #000,
@@ -872,6 +873,7 @@ display:none;
 .hero-text h1{
 
 font-size:3rem;
+min-height: 5.7rem;
 
 }
 
