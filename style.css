@@ -1248,8 +1248,10 @@ display:none;
 }
 
 .btn-paquetes {
+  display: inline-block;
   background: #fdc612;
   color: #111;
+  text-decoration: none;
   font-family: 'Fredoka', sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
