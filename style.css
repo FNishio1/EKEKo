@@ -39,6 +39,8 @@ backdrop-filter:blur(50px);
 .logo-area img{
 
 width:200px;
+aspect-ratio: 1337 / 443;
+height: auto;
 
 }
 
@@ -163,6 +165,8 @@ color:#ff0088;
 .hero-image img {
   width: 100%;
   max-width: 520px;
+  aspect-ratio: 958 / 1078;
+  height: auto;
 }
 
 
@@ -611,6 +615,8 @@ color:#ff0088;
 
 .footer img {
   width: 280px;
+  aspect-ratio: 1920 / 1080;
+  height: auto;
   margin-bottom: 20px;
 }
 
@@ -998,6 +1004,8 @@ display:none;
 
   .logo-area img {
     width: 170px;
+    aspect-ratio: 1337 / 443;
+    height: auto;
   }
 
   .nav {
