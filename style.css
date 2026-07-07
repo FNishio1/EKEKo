@@ -102,17 +102,25 @@ color:#ff0088;
   gap: 60px;
   align-items: center;
 }
-
 .hero-text h1 {
   font-family: 'Anton', sans-serif;
   font-size: 5rem;
   line-height: 0.95;
   min-height: 9.5rem;
   color: #00e9b2;
-  text-shadow:
-    4px 4px 0 #000,
-    8px 8px 20px rgba(0,0,0,0.4);
   margin-bottom: 20px;
+  
+  /* TODO EN UNA SOLA PROPIEDAD: */
+  text-shadow:
+    /* 1. Primero el borde fino alrededor de toda la letra */
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000,
+    /* 2. Luego tu sombra sólida desplazada hacia abajo/derecha (Efecto 3D) */
+    4px 4px 0 #000,
+    /* 3. Por último, la sombra suave con desenfoque al fondo de todo */
+    8px 8px 20px rgba(0,0,0,0.4);
 }
 
 .hero-text p {
@@ -141,8 +149,8 @@ color:#ff0088;
 }
 
 .btn-primary {
-  background: #ff0088;
-  color: white;
+  background: #e456c5;
+  color: rgb(0, 0, 0);
 }
 
 .btn-secondary {
@@ -187,8 +195,8 @@ color:#ff0088;
   background-color: #1a0020;
   
   background-image: 
-    linear-gradient(to right, #dc6e82 0.05px, transparent 1px),
-    linear-gradient(to bottom, #dc6e82 0.05px, transparent 1px);
+    linear-gradient(to right, #490263 0.05px, transparent 1px),
+    linear-gradient(to bottom, #490263 0.05px, transparent 1px);
   background-size: 40px 40px;
 }
 
@@ -504,8 +512,8 @@ color:#ff0088;
   padding: 100px 8%;
   background-color: #fef6ef;
   background-image: 
-    radial-gradient(circle at 50% 0%, transparent 55%, rgba(255, 255, 255, 0.8) 56%, transparent 62%),
-    radial-gradient(circle at 0% 50%, transparent 55%, rgba(255, 255, 255, 0.8) 56%, transparent 62%);
+    radial-gradient(circle at 50% 0%, transparent 55%, rgba(255, 255, 255, 1) 56%, transparent 62%),
+    radial-gradient(circle at 0% 50%, transparent 55%, rgba(255, 255, 255, 1) 56%, transparent 62%);
   background-size: 50px 50px;
 }
 
@@ -1050,7 +1058,7 @@ display:none;
     display: block;
     width: 25px;
     height: 3px;
-    background: rgb(13, 13, 13);
+    background: rgb(251, 251, 251);
     border-radius: 3px;
   }
 
@@ -1162,7 +1170,7 @@ display:none;
   font-family: 'Fredoka', sans-serif;
   font-weight: 700;
   margin-bottom: 12px;
-  color: #f7d08c;
+  color: #ffe553;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-shadow:
@@ -1172,7 +1180,7 @@ display:none;
      1px  1px 0 #000;
 }
 .edu-card--winner h3 {
-  color: #ff0088;
+  color:#00ff5e;
 }
 .edu-card p {
   font-size: 0.95rem;
@@ -1193,13 +1201,9 @@ display:none;
 .edu-card--vs span {
   font-family: 'Anton', sans-serif;
   font-size: 1.6rem;
-  color: #ccc;
+  color: #040003;
   margin: 0;
-  text-shadow:
-    -1px -1px 0 #000,
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
+  
 }
 
 .edu-card--winner {
