@@ -61,6 +61,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<!-- Anton: auto-hospedada en assets/fonts/, con preload para que esté
+     lista antes del primer pintado. Elimina el salto de fuente (CLS)
+     que causaba ir hasta Google primero. -->
+<link rel="preload" href="assets/fonts/Anton-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
 <!-- style.min.css: carga bloqueante normal.
      Ya está minificado (21KB / ~5-6KB con gzip), así que bloquear el
      render aquí cuesta poco, y evita el "forced reflow" que causaba
@@ -69,9 +74,9 @@
      (que solo cubría header/hero, no el resto de la página). -->
 <link rel="stylesheet" href="style.min.css">
 
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;700&family=Fredoka:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Fredoka:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;700&family=Fredoka:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Fredoka:wght@400;600;700&display=swap">
 </noscript>
 
 </head>
