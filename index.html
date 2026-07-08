@@ -58,10 +58,57 @@
 }
 </script>
 
-<link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;500;700&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- CSS CRÍTICO INLINE: cubre el primer pintado (header, hero, botón WhatsApp)
+     y OCULTA los popups (chat, modal, menú móvil) para que no haya flash
+     mientras style.min.css completo carga en paralelo, sin bloquear. -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Montserrat',sans-serif;background:#f8f1e7;color:#222;overflow-x:hidden;}
+
+/* Header */
+.header{width:100%;padding:5px 8%;display:flex;justify-content:space-between;align-items:center;position:fixed;top:0;left:0;z-index:1000;background:rgba(73,1,74,0.2);backdrop-filter:blur(50px);}
+.logo-area img{width:200px;aspect-ratio:1337/443;height:auto;}
+.nav{display:flex;gap:40px;}
+.nav a{text-decoration:none;color:#222;font-weight:700;}
+.hamburger{display:none;}
+@media(max-width:768px){.hamburger{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:5px;z-index:1001;position:fixed;top:15px;right:20px;}}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:140px 8% 80px;position:relative;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(251,254,255,0.92),rgba(250,243,217,0.92));}
+.hero-content{position:relative;z-index:2;width:100%;max-width:1400px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.hero-text h1{font-family:'Anton',sans-serif;font-size:5rem;line-height:0.95;min-height:9.5rem;color:#00e9b2;margin-bottom:20px;}
+.hero-text p{font-size:1.2rem;line-height:1.7;margin-bottom:40px;max-width:600px;font-weight:700;color:#000;}
+.hero-buttons{display:flex;gap:20px;flex-wrap:wrap;}
+.btn-primary,.btn-secondary{padding:10px 20px;border-radius:10px;text-decoration:none;font-weight:700;cursor:pointer;}
+.btn-primary{background:#e456c5;color:#000;}
+.btn-secondary{background:rgb(245,194,26);color:#111;}
+.hero-image{display:flex;justify-content:center;margin-top:5px;}
+.hero-image img{width:100%;max-width:520px;aspect-ratio:958/1078;height:auto;}
+@media(max-width:768px){.hero{padding-top:90px;min-height:calc(100vh - 40px);}}
+
+/* Botón flotante WhatsApp: siempre visible, hay que fijarle tamaño ya
+   para que no haga flash gigante con la imagen a resolución nativa */
+.wa-chat-button{position:fixed;right:30px;bottom:30px;background:#25D366;padding:12px 15px;border-radius:100px;display:flex;align-items:center;gap:5px;cursor:pointer;z-index:2000;box-shadow:0 10px 30px rgba(12,12,12,0.933);color:#fff;font-weight:700;font-size:0.9rem;}
+.wa-chat-button img{width:42px;height:42px;border-radius:50%;}
+@media(max-width:768px){.wa-chat-button span{display:none;}}
+
+/* Popups/overlays ocultos por defecto: esto es lo que evita el flash
+   de la ventana de WhatsApp, el chat Ekeko IA, el modal y el menú móvil */
+.wa-chat-box,.chat-box{opacity:0;pointer-events:none;position:fixed;bottom:100px;right:30px;}
+.modal-overlay{display:none;position:fixed;inset:0;}
+.mobile-menu{display:none;}
+</style>
+
+<link rel="preload" href="style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;700&family=Fredoka:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;700&family=Fredoka:wght@400;600;700&display=swap">
+</noscript>
 
 </head>
 
@@ -135,7 +182,6 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-text">
-      <img src="assets/logo3.webp" alt="EkekoWebs Logo" class="logo-movil" width="1920" height="1080">
       <h1>CREAMOS TU WEB PROFESIONAL</h1>
       <p>¿Tu negocio no aparece en Google? ¿Tus clientes no te encuentran fácil?, Creamos tu página web profesional para que te encuentren, te llamen y vendas más.  Directo a tu WhatsApp.</p>
       <div class="hero-buttons">
@@ -314,8 +360,9 @@
         <a href="https://wa.me/51999156493" class="btn-primary" target="_blank" rel="noopener noreferrer">Lo quiero</a>
       </div>
 
-      <div class="modal-paquete">
-        <div class="modal-paquete-header">
+    <div class="modal-paquete modal-paquete--featured">
+      <div class="modal-paquete-header">
+          <span class="modal-badge">⚡ El más elegido</span>
           <h3>El más fuerte</h3>
           <p class="modal-precio">S/ 300</p>
           <p class="modal-subtitulo">Para el negocio que ya tiene redes y quiere dar el siguiente paso.</p>
@@ -328,9 +375,8 @@
         <a href="https://wa.me/51999156493" class="btn-primary" target="_blank" rel="noopener noreferrer">Lo quiero</a>
       </div>
 
-      <div class="modal-paquete modal-paquete--featured">
-        <div class="modal-paquete-header">
-          <span class="modal-badge">Recomendado</span>
+    <div class="modal-paquete">
+      <div class="modal-paquete-header">
           <h3>El premium</h3>
           <p class="modal-precio">S/ 450</p>
           <p class="modal-subtitulo">Para el negocio que arranca desde cero su presencia digital completa.</p>
