@@ -72,9 +72,6 @@ color:#ff0088;
 
 .hero {
   min-height: 100vh;
-  background-image: url('assets/hero-bg.webp');
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -657,6 +654,8 @@ color:#ff0088;
 /* Crea una separación limpia debajo de las redes sociales */
 .footer-contact {
   margin-top: 40px; /* Esto empuja el teléfono y correo un renglón más abajo con espacio elegante */
+  position: relative;
+  z-index: 1;
 }
 
 .footer-contact p {
@@ -668,10 +667,20 @@ color:#ff0088;
   text-align: center;
   color: white;
   background-color: #e456c5;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -80px;
+  width: calc(100% + 160px);
+  height: 100%;
   background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.12) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0.12) 75%, transparent 75%, transparent);
   background-size: 80px 80px;
   animation: olasDelAgua 6s linear infinite;
-  overflow: hidden;
+  z-index: 0;
 }
 
 .footer-copyright {
@@ -694,8 +703,8 @@ color:#ff0088;
 
 /* 🟢 2. PEGA ESTE BLOQUE AL FINAL DE TODO TU ARCHIVO CSS */
 @keyframes olasDelAgua {
-  from { background-position: 0 0; }
-  to { background-position: 80px 0; }
+  from { transform: translateX(0); }
+  to   { transform: translateX(80px); }
 }
 
 /* ========================= */
@@ -821,10 +830,6 @@ color:#ff0088;
   opacity: 0.9;
 }
 
-/* Oculta el logo en computadoras */
-.logo-movil {
-  display: none;
-}
 /* ========================= */
 /* RESPONSIVE */
 /* ========================= */
@@ -1027,9 +1032,6 @@ display:none;
     min-height: calc(100vh - 40px);
   }
 
-  .hero-text img.logo-movil {
-    display: none;
-  }
 }
 /* BOTÓN HAMBURGUESA */
   /* Oculto en laptop */
@@ -1340,7 +1342,7 @@ display:none;
 
 .modal-paquetes-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-bottom: 40px;
 }
@@ -1488,6 +1490,8 @@ display:none;
   justify-content: center;
   flex-wrap: wrap;
   margin: 30px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-btn {
