@@ -640,6 +640,8 @@ color:#ff0088;
   gap: 12px;
   margin-top: 20px;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-links a {
