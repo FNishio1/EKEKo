@@ -184,6 +184,7 @@
 <!-- SECCIÓN EDUCATIVA -->
 <!-- ========================= -->
 <section class="educativa" id="por-que">
+  <canvas id="splash-cursor"></canvas>
   <div class="educativa-content">
     <h2>¿Por qué una web y no solo redes sociales?</h2>
         <p>Tu página de Facebook está bien, pero cuando tu cliente busca en Google <strong>"pollería en Jesús María"</strong> o <strong>"cerrajero en Lince"</strong> — ¿apareces tú? Probablemente no.</p>
@@ -271,34 +272,62 @@
 <!-- ========================= -->
 <section class="portfolio" id="portafolio">
   <h2>Portafolio</h2>
+  <!-- Reemplaza DEMO_BASE_URL por el dominio real del repo de demos (GitHub Pages o Netlify) -->
   <div class="portfolio-grid">
 
-    <div class="portfolio-item">
+    <a class="portfolio-item" href="DEMO_BASE_URL/giganton/" target="_blank" rel="noopener">
       <div class="phone-mockup">
-        <div class="phone-screen">
-          <img src="assets/Image1.webp" alt="Proyecto 1" width="515" height="7691" loading="lazy">
+        <div class="phone-screen phone-screen-placeholder" style="background:#ff0088;">
+          <span>El Gigantón</span>
         </div>
       </div>
-      <p>Restaurantes locales</p>
-    </div>
+      <p>El Gigantón — Pollería</p>
+    </a>
 
-    <div class="portfolio-item">
+    <a class="portfolio-item" href="DEMO_BASE_URL/cafetoboss/" target="_blank" rel="noopener">
       <div class="phone-mockup">
-        <div class="phone-screen">
-          <img src="assets/Image2.webp" alt="Proyecto 2" width="515" height="10199" loading="lazy">
+        <div class="phone-screen phone-screen-placeholder" style="background:#fdc612;">
+          <span>CafetoBoss</span>
         </div>
       </div>
-      <p>Agencias de turismo</p>
-    </div>
+      <p>CafetoBoss — Cafetería</p>
+    </a>
 
-    <div class="portfolio-item">
+    <a class="portfolio-item" href="DEMO_BASE_URL/agri-hercules/" target="_blank" rel="noopener">
       <div class="phone-mockup">
-        <div class="phone-screen">
-          <img src="assets/Image3.webp" alt="Proyecto 3" width="515" height="5060" loading="lazy">
+        <div class="phone-screen phone-screen-placeholder" style="background:#00e9b2;">
+          <span>Agri Hércules</span>
         </div>
       </div>
-      <p>Comida rapida del barrio</p>
-    </div>
+      <p>Agri Hércules — Agro</p>
+    </a>
+
+    <a class="portfolio-item" href="DEMO_BASE_URL/green-grillers/" target="_blank" rel="noopener">
+      <div class="phone-mockup">
+        <div class="phone-screen phone-screen-placeholder" style="background:#e456c5;">
+          <span>Green Grillers</span>
+        </div>
+      </div>
+      <p>Green Grillers</p>
+    </a>
+
+    <a class="portfolio-item" href="DEMO_BASE_URL/don-pepe/" target="_blank" rel="noopener">
+      <div class="phone-mockup">
+        <div class="phone-screen phone-screen-placeholder" style="background:#ff1024;">
+          <span>Don Pepe</span>
+        </div>
+      </div>
+      <p>Cebichería Don Pepe</p>
+    </a>
+
+    <a class="portfolio-item" href="DEMO_BASE_URL/sunday-bites/" target="_blank" rel="noopener">
+      <div class="phone-mockup">
+        <div class="phone-screen phone-screen-placeholder" style="background:#1a0020;">
+          <span>Sunday Bites</span>
+        </div>
+      </div>
+      <p>Sunday Bites</p>
+    </a>
 
   </div>
 </section>
@@ -448,6 +477,22 @@
 </div>
 
 <script src="script.js"></script>
+
+<script src="splash-cursor.js"></script>
+<script>
+  initSplashCursor(document.getElementById('splash-cursor'), {
+    COLOR: '#ff0066',   // usé el rosado que ya usas en .strong, cámbialo si quieres
+    SPLAT_FORCE: 600,
+    DENSITY_DISSIPATION: 3.5,
+    VELOCITY_DISSIPATION: 2,
+    PRESSURE: 0.1,
+    CURL: 3,
+    SPLAT_RADIUS: 0.2,
+    COLOR_UPDATE_SPEED: 10,
+    SHADING: true,
+    RAINBOW_MODE: false
+  });
+</script>
 
 </body>
 </html>
